@@ -10,7 +10,7 @@ from bybytes.models import DoubleFile
 
 class DoubleFileView(View):
     def get(self, request, *args, **kwargs):
-        return HttpResponse(DoubleFile.objects.first().file_image)
+        return HttpResponse(DoubleFile.objects.first().file_image.url)
 
 class DoubleFileBytesView(View):
     def get(self, request, *args, **kwargs):
